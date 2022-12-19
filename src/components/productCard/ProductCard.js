@@ -7,10 +7,6 @@ loops through the product's information
 display that information*/
 
 // TODO:Return a displayed card
-export default function ProductCard({ name }) {
-  const createProductElements = () => {
-    return <div>{name}</div>;
-  };
-
-  return createProductElements();
+export default function ProductCard(props) {
+  return <div>{props.name}</div>;
 }
