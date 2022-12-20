@@ -1,12 +1,24 @@
-// TODO:Component genrates a card for each product
-// TODO:takes variables that represents a product of each product
-// TODO:Name, Price, Image 1, Image 2
+import { useState } from 'react';
 
-/* TODO:generateCard function that: 
-loops through the product's information
-display that information*/
-
-// TODO:Return a displayed card
 export default function ProductCard(props) {
-  return <div>{props.name}</div>;
+  const [imageHover, setImageHover] = useState(false);
+
+  return (
+    <div
+      class="product"
+      data-testid="product"
+      onMouseEnter={() => setImageHover(true)}
+      onMouseLeave={() => {
+        setImageHover(false);
+      }}
+    >
+      <img
+        class="productImg"
+        src={!imageHover ? props.imageOne : props.imageTwo}
+        alt="guitar"
+      />
+      <div>{props.name}</div>
+      <div>{props.price}</div>
+    </div>
+  );
 }
