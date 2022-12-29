@@ -8,9 +8,7 @@ export default function ProductCard(props) {
       class="product"
       data-testid="product"
       onMouseEnter={() => setImageHover(true)}
-      onMouseLeave={() => {
-        setImageHover(false);
-      }}
+      onMouseLeave={() => setImageHover(false)}
     >
       <img
         class="productImg"
