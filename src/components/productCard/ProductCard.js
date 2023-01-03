@@ -5,13 +5,13 @@ export default function ProductCard(props) {
 
   return (
     <div
-      class="product"
+      className="product"
       data-testid="product"
       onMouseEnter={() => setImageHover(true)}
       onMouseLeave={() => setImageHover(false)}
     >
       <img
-        class="productImg"
+        className="productImg"
         src={!imageHover ? props.imageOne : props.imageTwo}
         alt="guitar"
       />
