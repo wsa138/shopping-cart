@@ -5,13 +5,21 @@ export default function ProductCard(props) {
 
   return (
     <div
+<<<<<<< HEAD
       className="product"
+=======
+      class="product"
+>>>>>>> productCardBuild
       data-testid="product"
       onMouseEnter={() => setImageHover(true)}
       onMouseLeave={() => setImageHover(false)}
     >
       <img
+<<<<<<< HEAD
         className="productImg"
+=======
+        class="productImg"
+>>>>>>> productCardBuild
         src={!imageHover ? props.imageOne : props.imageTwo}
         alt="guitar"
       />
